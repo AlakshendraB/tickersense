@@ -1,0 +1,9 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  padding: 12px;
+}
