@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="bg-dark text-light">
+<h2 id="stock-name">📈 Upload a CSV to view the stock</h2>
+
+<input type="file" id="csvFile" accept=".csv" />
+<button onclick="handleCSV()">Upload CSV</button>
+
+<canvas id="chart"></canvas> <!-- assuming you're using Chart.js -->
+
+<!-- PapaParse (CSV parser) CDN -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="js/chart.js"></script> <!-- your chart code -->
 
   <nav class="navbar navbar-dark bg-black px-4">
     <span class="navbar-brand mb-0 h1">📈 TickerSense</span>
