@@ -9,19 +9,32 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-  <h2 id="stock-name">📈 Upload a CSV file</h2>
 
-  <input type="file" id="csvFile" accept=".csv" />
-  <button onclick="handleCSV()">Upload CSV</button>
+  <header>
+    <h1>TickerSense 📊</h1>
+    <p>AI-powered stock insights & interactive visualizations</p>
+  </header>
 
-  <canvas id="stockChart" width="600" height="300"></canvas>
+  <main>
+    <section id="upload-section">
+      <h2 id="stock-name">📈 Upload a CSV file</h2>
+      <input type="file" id="csvFile" accept=".csv" aria-label="Upload CSV file" />
+      <button onclick="handleCSV()" aria-label="Upload stock CSV">Upload CSV</button>
+    </section>
 
-  <div id="ai-box">
-    <textarea id="user-input" placeholder="Ask the AI about this stock..."></textarea>
-    <button onclick="askAI()">Ask AI</button>
-    <div id="ai-response"></div>
-  </div>
+    <canvas id="stockChart" width="600" height="300" role="img" aria-label="Stock Chart Visualization"></canvas>
 
-  <script src="js/chart.js"></script>
+    <section id="ai-box">
+      <textarea id="user-input" placeholder="Ask the AI about this stock..." aria-label="Ask AI about stock data"></textarea>
+      <button onclick="askAI()" aria-label="Ask AI for insights">Ask AI</button>
+      <div id="ai-response" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Alakshendra Bhardwaj</p>
+  </footer>
+
+  <script src="js/charts.js"></script>
 </body>
 </html>
